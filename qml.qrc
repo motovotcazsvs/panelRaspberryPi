@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>images/audioz.jpg</file>
+        <file>images/back.png</file>
+        <file>images/backgroundRPi.jpg</file>
+        <file>images/bgd2.jpg</file>
+        <file>images/clock.jpg</file>
+        <file>images/music.jpg</file>
+        <file>images/news.jpg</file>
+        <file>images/off.png</file>
+        <file>images/radio.jpg</file>
+        <file>images/rpi.png</file>
+        <file>images/tv.jpg</file>
+        <file>images/video.png</file>
+        <file>images/videoz.jpg</file>
+        <file>images/weather.jpg</file>
+        <file>Page2.qml</file>
+        <file>ScreenMain.qml</file>
+        <file>RecBack.qml</file>
+        <file>RecSwitch.qml</file>
+        <file>images/presInBut.png</file>
+        <file>images/inBut.jpg</file>
+        <file>RecButInp.qml</file>
+        <file>RecButInp2.qml</file>
+        <file>images/button.png</file>
+        <file>images/fuel-icon.png</file>
+        <file>images/temperature-icon.png</file>
+        <file>DashboardGaugeStyle.qml</file>
+        <file>IconGaugeStyle.qml</file>
+        <file>TachometerStyle.qml</file>
+        <file>TurnIndicator.qml</file>
+        <file>ValueSource.qml</file>
+        <file>DashBoard.qml</file>
+    </qresource>
+</RCC>
