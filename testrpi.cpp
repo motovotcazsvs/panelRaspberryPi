@@ -7,7 +7,7 @@ bool switch_on = false;
 TestRPi::TestRPi(int rpi_pin, int rpi_type, void (*isrInput)(void), QObject *parent) : QObject(parent)
 {
 
-    //wiringPiSetup();
+    wiringPiSetup();
     pin = rpi_pin;
 
     value_pwm = 0;
@@ -16,24 +16,24 @@ TestRPi::TestRPi(int rpi_pin, int rpi_type, void (*isrInput)(void), QObject *par
     {
         case GPIO_INPUT:
         {
-            //pinMode(pin, INPUT);
-            //wiringPiISR(pin, INT_EDGE_BOTH, isrInput);
+            pinMode(pin, INPUT);
+            wiringPiISR(pin, INT_EDGE_BOTH, isrInput);
             break;
         }
 
         case GPIO_OUTPUT:
         {
-            //pinMode(pin, OUTPUT);
+            pinMode(pin, OUTPUT);
             break;
         }
 
         case GPIO_PWM:
         {
-            //softPwmCreate(pin, value_pwm, 100);
+            softPwmCreate(pin, value_pwm, 100);
             break;
         }
     }
-    switch_on = false;
+    //switch_on = false;
 
 }
 
@@ -44,20 +44,18 @@ TestRPi::TestRPi(QObject *parent) : QObject(parent)
 
 void TestRPi::isrCallback()
 {
-    /*
     if(switch_on){
         emit inputChanged(digitalRead(pin));
     }
-    */
+  
 }
 
 void TestRPi::pinHigh()
 {
-    /*
     if(switch_on){
         digitalWrite(pin, HIGH);
     }
-    */
+    
     if(switch_on){
         qDebug("pin High");
     }
@@ -65,11 +63,11 @@ void TestRPi::pinHigh()
 
 void TestRPi::pinLow()
 {
-    /*
+    
     if(switch_on){
         digitalWrite(pin, LOW);
     }
-    */
+    
     if(switch_on){
         qDebug("pin Low");
     }
@@ -78,7 +76,7 @@ void TestRPi::pinLow()
 void TestRPi::setPwmValue(int value)
 {
     static int value_temp = 0;
-    /*
+   
     if(switch_on){
         if(value_temp != value) {
             softPwmWrite(pin, value);
@@ -88,7 +86,7 @@ void TestRPi::setPwmValue(int value)
     else {
         value_temp = 0;
     }
-    */
+ /*   
     if(switch_on){
         if(value_temp != value) {
             qDebug() << "PWM" << value;
@@ -98,19 +96,19 @@ void TestRPi::setPwmValue(int value)
     else {
         value_temp = 0;
     }
-
+*/
 }
 
 void TestRPi::toggleSwitch()
 {
     switch_on = !switch_on;
-/*
+
     if(!switch_on){
         digitalWrite(13, LOW);
         softPwmWrite(4, 0);
     }
 
-*/
+
     if(switch_on){
         qDebug("Switch On");
     }

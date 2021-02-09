@@ -3,6 +3,9 @@
 
 #include <QObject>
 
+#include "wiringPi.h"
+#include "softPwm.h"
+
 #define GPIO_INPUT   0
 #define GPIO_OUTPUT  1
 #define GPIO_PWM     2
