@@ -7,12 +7,10 @@ Bye::Bye(QObject *parent) : QObject(parent)
 
 void Bye::funcShotdown()
 {
-    //system("shutdown -h now");
-    qDebug("ВЫКЛЮЧАЮ Raspberry Pi.");
+    system("shutdown -h now");
 }
 
 void Bye::funcReboot()
 {
-    //system("shutdown -r now");
-    qDebug("ПЕРЕЗАГРУЖАЮ Raspberry Pi.");
+    system("shutdown -r now");
 }

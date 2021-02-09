@@ -5,11 +5,12 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.4
 
 Window {
-    id: w
+id: w
     visible: true
-    width: 1024
-    height: 600
-    //flags: Qt.FramelessWindowHint
+    visibility: Window.FullScreen// для линухи
+    //width: 1024//window
+    //height: 600
+    flags: Qt.FramelessWindowHint
     StackView {
         id: stackView
         anchors.fill: parent
