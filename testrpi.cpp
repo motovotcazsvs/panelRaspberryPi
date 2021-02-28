@@ -33,7 +33,6 @@ TestRPi::TestRPi(int rpi_pin, int rpi_type, void (*isrInput)(void), QObject *par
             break;
         }
     }
-    //switch_on = false;
 
 }
 

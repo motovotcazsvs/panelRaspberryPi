@@ -5,7 +5,6 @@
 #include <QtGui/QFontDatabase>
 #include "bye.h"
 #include "testrpi.h"
-#include <QDebug>
 
 
 static void isrInput1();
