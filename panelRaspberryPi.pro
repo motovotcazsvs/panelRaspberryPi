@@ -5,7 +5,8 @@ CONFIG += c++11
 
 SOURCES += main.cpp \
     bye.cpp \
-    testrpi.cpp
+    testrpi.cpp \
+    radio.cpp
 
 RESOURCES += qml.qrc
 
@@ -31,4 +32,5 @@ include(deployment.pri)
 
 HEADERS += \
     bye.h \
-    testrpi.h
+    testrpi.h \
+    radio.h
