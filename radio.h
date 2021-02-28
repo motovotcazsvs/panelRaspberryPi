@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QMediaPlayer>
+#include <QUrl>
 
 class Radio : public QObject
 {
@@ -13,9 +14,15 @@ public:
 signals:
 
 public slots:
+    void playRadioClicked();
+    void pauseRadioClicked();
+    void volumeMaxRadioClicked();
+    void volumeMinRadioClicked();
 
 private:
-    QMediaPlayer *player;
+    QMediaPlayer *player_radio;
+    QUrl radio_station;
+    int radio_volume;
 };
 
 #endif // RADIO_H

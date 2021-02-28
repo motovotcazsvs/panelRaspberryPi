@@ -3,9 +3,11 @@
 #include <QQmlContext>
 #include <QtGui/QFont>
 #include <QtGui/QFontDatabase>
+#include <QDebug>
+
 #include "bye.h"
 #include "testrpi.h"
-#include <QDebug>
+#include "radio.h"
 
 
 static void isrInput1();
