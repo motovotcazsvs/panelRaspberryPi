@@ -10,7 +10,7 @@ void Radio::playRadioClicked()
 
 }
 
-void Radio::playRadioClicked()
+void Radio::pauseRadioClicked()
 {
 
 }
@@ -24,3 +24,4 @@ void Radio::volumeMinRadioClicked()
 {
 
 }
+
