@@ -317,11 +317,9 @@ Window {
 
         Rectangle {
             id: fon_radio
-            //anchors.fill: parent
             height: 600
             width: 350
             anchors.horizontalCenter: parent.horizontalCenter
-
             color: "black"
 
 

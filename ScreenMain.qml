@@ -257,7 +257,7 @@ Page {
             id: but9
             anchors.fill: recB9
             onClicked: {
-                
+                onClicked: stackView.push(page4);
             }
         }
         

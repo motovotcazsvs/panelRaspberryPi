@@ -68,7 +68,7 @@ Page {
     }
     
     RecBack {
-        id: recBack
+        id: recBack1
     }
     
 }
