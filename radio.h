@@ -10,8 +10,10 @@ class Radio : public QObject
     Q_OBJECT
 public:
     explicit Radio(QObject *parent = 0);
+    Q_INVOKABLE void setUrlStation();
 
 signals:
+    void radioDoesNotPlay();
 
 public slots:
     void playRadioClicked();
@@ -21,7 +23,7 @@ public slots:
 
 private:
     QMediaPlayer *player_radio;
-    QUrl radio_station;
+    QString radio_station;
     int radio_volume;
 };
 

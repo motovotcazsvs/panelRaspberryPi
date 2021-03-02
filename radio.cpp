@@ -7,7 +7,9 @@ Radio::Radio(QObject *parent) : QObject(parent)
 
 void Radio::playRadioClicked()
 {
-
+    mPlayer->setMedia(QUrl(radio_station));
+    mPlayer->setVolume(radio_volume);
+    mPlayer->play();
 }
 
 void Radio::pauseRadioClicked()
@@ -25,3 +27,17 @@ void Radio::volumeMinRadioClicked()
 
 }
 
+void Radio::setUrlStation()
+{
+
+}
+
+void Radio::getUrlStation()
+{
+
+}
+
+void Radio::radioDoesNotPlay()
+{
+
+}
