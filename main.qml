@@ -317,14 +317,58 @@ Window {
 
         Rectangle {
             id: fon_radio
-            //anchors.fill: parent
             height: 600
             width: 350
             anchors.horizontalCenter: parent.horizontalCenter
-
             color: "black"
 
+            Rectangle {
+                id: zastavka_record
+                height: 150
+                width: 150
+                anchors.horizontalCenter: parent.horizontalCenter
 
+                Image {
+                    id: image_zastavka_record
+                    anchors.fill: zastavka_record
+                    source: "images/record.png"
+                }
+            }
+
+            Item {
+                id: button_radio_station
+
+                Rectangle {
+                    id: but_radio_station
+                    width: 70
+                    height: 70
+                    border.color: "white"
+                    border.width: 1
+                    radius: 35
+                    color: "black"
+
+                    Rectangle {
+                        id: rec2_radio
+                        width: 56
+                        height: 56
+                        color: "#343a40"
+                        anchors.horizontalCenter: but_radio_station.horizontalCenter
+                        anchors.verticalCenter: but_radio_station.verticalCenter
+                        radius: 38
+
+                        Image {
+                            id: image_station_dance
+                            //source: "images/danceradio.png"
+                            source: "images/danceradio2.png"
+                            anchors.horizontalCenter: rec2_radio.horizontalCenter
+                            anchors.verticalCenter: rec2_radio.verticalCenter
+                            anchors.fill: rec2_radio
+                            anchors.margins: 5
+                        }
+
+                    }
+                }
+            }
         }
 
         RecBack {

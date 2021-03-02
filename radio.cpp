@@ -3,13 +3,15 @@
 Radio::Radio(QObject *parent) : QObject(parent)
 {
     player_radio = new QMediaPlayer;
+    radio_station = "https://air2.radiorecord.ru:9002/rr_128";
+    radio_volume = 50;
 }
 
 void Radio::playRadioClicked()
 {
-    mPlayer->setMedia(QUrl(radio_station));
-    mPlayer->setVolume(radio_volume);
-    mPlayer->play();
+    player_radio->setMedia(QUrl(radio_station));
+    player_radio->setVolume(radio_volume);
+    player_radio->play();
 }
 
 void Radio::pauseRadioClicked()
@@ -32,12 +34,7 @@ void Radio::setUrlStation()
 
 }
 
-void Radio::getUrlStation()
+/*void Radio::radioDoesNotPlay()
 {
 
-}
-
-void Radio::radioDoesNotPlay()
-{
-
-}
+}*/

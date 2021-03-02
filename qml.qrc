@@ -32,5 +32,8 @@
         <file>TurnIndicator.qml</file>
         <file>ValueSource.qml</file>
         <file>DashBoard.qml</file>
+        <file>images/record.png</file>
+        <file>images/danceradio.png</file>
+        <file>images/danceradio2.png</file>
     </qresource>
 </RCC>

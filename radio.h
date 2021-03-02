@@ -13,7 +13,7 @@ public:
     Q_INVOKABLE void setUrlStation();
 
 signals:
-    void radioDoesNotPlay();
+    //void radioDoesNotPlay();
 
 public slots:
     void playRadioClicked();
