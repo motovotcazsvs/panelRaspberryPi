@@ -335,44 +335,16 @@ Window {
                 }
             }
 
-            Item {
-                id: button_radio_station
+            ButtonRadioStation {
+                id: root
+                anchors.horizontalCenter: fon_radio.horizontalCenter
+                anchors.top: zastavka_record.bottom
 
-                Rectangle {
-                    id: but_radio_station
-                    width: 70
-                    height: 70
-                    border.color: "white"
-                    border.width: 1
-                    radius: 35
-                    color: "black"
-
-                    Rectangle {
-                        id: rec2_radio
-                        width: 56
-                        height: 56
-                        color: "#343a40"
-                        anchors.horizontalCenter: but_radio_station.horizontalCenter
-                        anchors.verticalCenter: but_radio_station.verticalCenter
-                        radius: 38
-
-                        Image {
-                            id: image_station_dance
-                            //source: "images/danceradio.png"
-                            source: "images/danceradio2.png"
-                            anchors.horizontalCenter: rec2_radio.horizontalCenter
-                            anchors.verticalCenter: rec2_radio.verticalCenter
-                            anchors.fill: rec2_radio
-                            anchors.margins: 5
-                        }
-
-                    }
-                }
             }
         }
 
         RecBack {
-            id: recBack3
+            id: recBack3  
         }
     }
 }

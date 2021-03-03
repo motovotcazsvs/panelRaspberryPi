@@ -22,7 +22,8 @@ OTHER_FILES += \
     TachometerStyle.qml \
     TurnIndicator.qml \
     ValueSource.qml \
-    DashBoard.qml
+    DashBoard.qml \
+    ButtonRadioStation.qml
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =

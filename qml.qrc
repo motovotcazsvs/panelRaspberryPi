@@ -35,5 +35,6 @@
         <file>images/record.png</file>
         <file>images/danceradio.png</file>
         <file>images/danceradio2.png</file>
+        <file>ButtonRadioStation.qml</file>
     </qresource>
 </RCC>

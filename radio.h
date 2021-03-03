@@ -20,6 +20,7 @@ public slots:
     void pauseRadioClicked();
     void volumeMaxRadioClicked();
     void volumeMinRadioClicked();
+    //void stateChanged();
 
 private:
     QMediaPlayer *player_radio;
