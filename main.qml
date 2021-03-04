@@ -321,6 +321,7 @@ Window {
             width: 350
             anchors.horizontalCenter: parent.horizontalCenter
             color: "black"
+            //color: "white"
 
             Rectangle {
                 id: zastavka_record
@@ -337,9 +338,9 @@ Window {
 
             ButtonRadioStation {
                 id: root
-                anchors.horizontalCenter: fon_radio.horizontalCenter
-                anchors.top: zastavka_record.bottom
 
+                x: fon_radio.width / 2 - 35
+                y: 120
             }
         }
 

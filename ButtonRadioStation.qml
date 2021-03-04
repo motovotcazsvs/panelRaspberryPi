@@ -6,16 +6,9 @@ import QtQuick.Controls 1.4
 
 Item {
     id: root
-    //anchors.horizontalCenter: fon_radio.horizontalCenter
-    //anchors.top: zastavka_record.bottom
-    //anchors.topMargin: 5
-    
-    
-    
+
     Rectangle {
         id: but_radio_station
-        //anchors.horizontalCenter: fon_radio.horizontalCenter
-        //anchors.top: zastavka_record.bottom
         width: 70
         height: 70
         border.color: "white"
