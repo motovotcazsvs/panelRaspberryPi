@@ -3,9 +3,12 @@ import QtQuick.Window 2.2
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.4
+import QtGraphicalEffects 1.0
 
 Item {
     id: root
+
+    property alias img_b: image_station_dance.source
 
     Rectangle {
         id: but_radio_station
@@ -28,12 +31,19 @@ Item {
             Image {
                 id: image_station_dance
                 //source: "images/danceradio.png"
-                source: "images/danceradio2.png"
+                //source: "images/danceradio2.png"
                 anchors.horizontalCenter: rec2_radio.horizontalCenter
                 anchors.verticalCenter: rec2_radio.verticalCenter
                 anchors.fill: rec2_radio
                 anchors.margins: 5
             }
+/*
+            ColorOverlay {
+                anchors.fill: image_station_dance
+                source: image_station_dance
+                color: "#ff6000"
+            }
+*/
             
         }
     }
