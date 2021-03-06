@@ -357,8 +357,7 @@ Window {
             ButtonRadioStation {
                 id: butBigHits
 
-                anchors.left: butRussianHits.right
-                anchors.leftMargin: butRussianHits.x
+                x: 20 + size_but_radio_station + 20
                 y: 250
                 //img_b: "images/bighits.png"
                 img_b: "images/bighits2.svg"

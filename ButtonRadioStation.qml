@@ -9,11 +9,12 @@ Item {
     id: root
 
     property alias img_b: image_station_dance.source
+    property int size_but_radio_station: 70
 
     Rectangle {
         id: but_radio_station
-        width: 70
-        height: 70
+        width: size_but_radio_station
+        height: size_but_radio_station
         border.color: "white"
         border.width: 1
         radius: 35
@@ -30,8 +31,6 @@ Item {
             
             Image {
                 id: image_station_dance
-                //source: "images/danceradio.png"
-                //source: "images/danceradio2.png"
                 anchors.horizontalCenter: rec2_radio.horizontalCenter
                 anchors.verticalCenter: rec2_radio.verticalCenter
                 anchors.fill: rec2_radio
