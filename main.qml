@@ -321,7 +321,6 @@ Window {
             width: 350
             anchors.horizontalCenter: parent.horizontalCenter
             color: "black"
-            //color: "white"
 
             Rectangle {
                 id: zastavka_record
@@ -336,14 +335,47 @@ Window {
                 }
             }
 
+            Text {
+                id: vefire
+                text: "В эфире:"
+                color: "green"
+                font.pointSize: 10
+                anchors.top: zastavka_record.bottom
+                anchors.topMargin: 3
+                //anchors.horizontalCenter: fon_radio.horizontalCenter
+            }
+
+            Column  {
+               id: columnvefire
+               anchors.top: vefire.bottom
+
+               Text {
+                   text: "string1 gjhghjgj gjhgjgjhjhhk jhk"
+                   color: "green"
+                   font.pointSize: 8
+               }
+
+               Text {
+                   text: "string2 gjhghjgj gjhgjgjhjhhk jhk"
+                   color: "green"
+                   font.pointSize: 8
+               }
+
+               Text {
+                   text: "string3 gjhghjgj gjhgjgjhjhhk jhk"
+                   color: "green"
+                   font.pointSize: 8
+               }
+            }
 
             ButtonRadioStation {
                 id: butDanceRadio
 
                 x: fon_radio.width / 2 - 35
-                y: 190
+                y: 200
                 //img_b: "images/danceradio.png"
                 img_b: "images/danceradio2.png"
+                name_radio_station: "Record"
             }
 
             Grid {
@@ -362,6 +394,7 @@ Window {
 
                     //img_b: "images/gold.png"
                     img_b: "images/gold2.svg"
+                    name_radio_station: "Record Gold"
                 }
 
                 ButtonRadioStation {
@@ -369,6 +402,7 @@ Window {
 
                     //img_b: "images/bighits.png"
                     img_b: "images/bighits2.svg"
+                    name_radio_station: "Big Hits"
                 }
 
                 ButtonRadioStation {
@@ -376,6 +410,7 @@ Window {
 
                     //img_b: "images/russianhits.png"
                     img_b: "images/russianhits2.svg"
+                    name_radio_station: "Russian Hits"
                 }
 
                 ButtonRadioStation {
@@ -383,6 +418,7 @@ Window {
 
                     //img_b: "images/sd90.png"
                     img_b: "images/sd902.svg"
+                    name_radio_station: "Супер<br>дискотека 90-х"
                 }
 
                 ButtonRadioStation {
@@ -390,6 +426,7 @@ Window {
 
                     //img_b: "images/russiangold.png"
                     img_b: "images/russiangold2.svg"
+                    name_radio_station: "Russian Gold"
                 }
 
                 ButtonRadioStation {
@@ -397,6 +434,7 @@ Window {
 
                     //img_b: "images/rv.png"
                     img_b: "images/rv2.svg"
+                    name_radio_station: "Руки Вверх!"
                 }
 
             }

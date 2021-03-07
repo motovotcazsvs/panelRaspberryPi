@@ -3,13 +3,14 @@ import QtQuick.Window 2.2
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.4
-//import QtGraphicalEffects 1.0
 
 Column {
+    id: column
     spacing: 5
 
     property alias img_b: image_station_dance.source
     property int size_but_radio_station: 70
+    property alias name_radio_station: name_radio_station.text
 
     Rectangle {
         id: but_radio_station
@@ -43,8 +44,9 @@ Column {
 
     Text {
         id: name_radio_station
-        text: qsTr("text")
         color: "white"
+        font.pointSize: 5
         anchors.horizontalCenter: but_radio_station.horizontalCenter
+
     }
 }
