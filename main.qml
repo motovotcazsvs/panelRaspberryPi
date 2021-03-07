@@ -358,45 +358,45 @@ Window {
                 //x: 30
 
                 ButtonRadioStation {
-                    id: butRussianHits
+                    id: buttonRadioStation1
 
-                    //img_b: "images/russianhits.png"
-                    img_b: "images/russianhits2.svg"
+                    //img_b: "images/gold.png"
+                    img_b: "images/gold2.svg"
                 }
 
                 ButtonRadioStation {
-                    id: butBigHits
+                    id: buttonRadioStation2
 
                     //img_b: "images/bighits.png"
                     img_b: "images/bighits2.svg"
                 }
 
                 ButtonRadioStation {
-                    id: butRussianHits2
+                    id: buttonRadioStation3
 
                     //img_b: "images/russianhits.png"
                     img_b: "images/russianhits2.svg"
                 }
 
                 ButtonRadioStation {
-                    id: butBigHits2
+                    id: buttonRadioStation4
 
-                    //img_b: "images/bighits.png"
-                    img_b: "images/bighits2.svg"
+                    //img_b: "images/sd90.png"
+                    img_b: "images/sd902.svg"
                 }
 
                 ButtonRadioStation {
-                    id: butRussianHits3
+                    id: buttonRadioStation5
 
-                    //img_b: "images/russianhits.png"
-                    img_b: "images/russianhits2.svg"
+                    //img_b: "images/russiangold.png"
+                    img_b: "images/russiangold2.svg"
                 }
 
                 ButtonRadioStation {
-                    id: butBigHits3
+                    id: buttonRadioStation6
 
-                    //img_b: "images/bighits.png"
-                    img_b: "images/bighits2.svg"
+                    //img_b: "images/rv.png"
+                    img_b: "images/rv2.svg"
                 }
 
             }
