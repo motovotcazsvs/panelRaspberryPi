@@ -341,7 +341,7 @@ Window {
                 id: butDanceRadio
 
                 x: fon_radio.width / 2 - 35
-                y: 120
+                y: 190
                 //img_b: "images/danceradio.png"
                 img_b: "images/danceradio2.png"
             }
@@ -350,7 +350,7 @@ Window {
                 id: grid
                 anchors.horizontalCenter: fon_radio.horizontalCenter
                 anchors.top: butDanceRadio.bottom
-                anchors.topMargin: 30
+                anchors.topMargin: 20
 
                 rows: 2
                 rowSpacing: 10
@@ -404,32 +404,51 @@ Window {
             Rectangle {
                 id: butPauseRadio
                 anchors.top: grid.bottom
-                anchors.topMargin: 30
+                anchors.topMargin: 20
                 anchors.horizontalCenter: fon_radio.horizontalCenter
                 width: butDanceRadio.size_but_radio_station
                 height: butDanceRadio.size_but_radio_station
                 radius: butDanceRadio.size_but_radio_station / 2
                 border.color: "white"
                 border.width: 1
-                color: "#ff6000"
+                color: "black"
 
+                Rectangle {
+                    id: recbutpause
+                    width: 56
+                    height: 56
+                    radius: 28
+                    anchors.centerIn: butPauseRadio
+                    color: "#ff6000"
+                    //color: "#343a40"
+                }
+/*
                 Row {
                     spacing: 5
                     anchors.horizontalCenter: butPauseRadio.horizontalCenter
                     anchors.verticalCenter: butPauseRadio.verticalCenter
+
                     Rectangle {
-                        width: 10
-                        height: 30
+                        width: 7
+                        height: 25
                         color: "white"
                     }
 
                     Rectangle {
-                        width: 10
-                        height: 30
+                        width: 7
+                        height: 25
                         color: "white"
                     }
                 }
-
+*/
+                Image {
+                    id: radio_play
+                    anchors.fill: recbutpause
+                    source: "images/playrecord.png"
+                    anchors.margins: 15
+                    anchors.left: recbutpause.left
+                    anchors.leftMargin: 20
+                }
 
             }
 

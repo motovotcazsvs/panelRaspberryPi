@@ -38,10 +38,16 @@
         <file>ButtonRadioStation.qml</file>
         <file>images/russianhits.png</file>
         <file>images/bighits2.svg</file>
-        <file>images/naft2.svg</file>
-        <file>images/rus2.svg</file>
         <file>images/russianhits2.svg</file>
         <file>images/rv2.svg</file>
         <file>images/sd902.svg</file>
+        <file>images/playrecord.png</file>
+        <file>images/russiangold2.svg</file>
+        <file>images/gold2.svg</file>
+        <file>images/bighits.png</file>
+        <file>images/gold.png</file>
+        <file>images/russiangold.png</file>
+        <file>images/rv.png</file>
+        <file>images/sd90.png</file>
     </qresource>
 </RCC>

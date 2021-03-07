@@ -27,7 +27,7 @@ Column {
             color: "#343a40"
             anchors.horizontalCenter: but_radio_station.horizontalCenter
             anchors.verticalCenter: but_radio_station.verticalCenter
-            radius: 38
+            radius: 28
             
             Image {
                 id: image_station_dance
