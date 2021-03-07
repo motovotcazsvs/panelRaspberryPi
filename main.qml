@@ -325,8 +325,8 @@ Window {
 
             Rectangle {
                 id: zastavka_record
-                height: 150
-                width: 150
+                height: 84
+                width: 151
                 anchors.horizontalCenter: parent.horizontalCenter
 
                 Image {
@@ -336,8 +336,9 @@ Window {
                 }
             }
 
+
             ButtonRadioStation {
-                id: butRecord
+                id: butDanceRadio
 
                 x: fon_radio.width / 2 - 35
                 y: 120
@@ -345,22 +346,91 @@ Window {
                 img_b: "images/danceradio2.png"
             }
 
-            ButtonRadioStation {
-                id: butRussianHits
+            Grid {
+                id: grid
+                anchors.horizontalCenter: fon_radio.horizontalCenter
+                anchors.top: butDanceRadio.bottom
+                anchors.topMargin: 30
 
-                x: 20
-                y: 250
-                //img_b: "images/russianhits.png"
-                img_b: "images/russianhits2.svg"
+                rows: 2
+                rowSpacing: 10
+                columnSpacing: 60
+                //x: 30
+
+                ButtonRadioStation {
+                    id: butRussianHits
+
+                    //img_b: "images/russianhits.png"
+                    img_b: "images/russianhits2.svg"
+                }
+
+                ButtonRadioStation {
+                    id: butBigHits
+
+                    //img_b: "images/bighits.png"
+                    img_b: "images/bighits2.svg"
+                }
+
+                ButtonRadioStation {
+                    id: butRussianHits2
+
+                    //img_b: "images/russianhits.png"
+                    img_b: "images/russianhits2.svg"
+                }
+
+                ButtonRadioStation {
+                    id: butBigHits2
+
+                    //img_b: "images/bighits.png"
+                    img_b: "images/bighits2.svg"
+                }
+
+                ButtonRadioStation {
+                    id: butRussianHits3
+
+                    //img_b: "images/russianhits.png"
+                    img_b: "images/russianhits2.svg"
+                }
+
+                ButtonRadioStation {
+                    id: butBigHits3
+
+                    //img_b: "images/bighits.png"
+                    img_b: "images/bighits2.svg"
+                }
+
             }
 
-            ButtonRadioStation {
-                id: butBigHits
+            Rectangle {
+                id: butPauseRadio
+                anchors.top: grid.bottom
+                anchors.topMargin: 30
+                anchors.horizontalCenter: fon_radio.horizontalCenter
+                width: butDanceRadio.size_but_radio_station
+                height: butDanceRadio.size_but_radio_station
+                radius: butDanceRadio.size_but_radio_station / 2
+                border.color: "white"
+                border.width: 1
+                color: "#ff6000"
 
-                x: 20 + size_but_radio_station + 20
-                y: 250
-                //img_b: "images/bighits.png"
-                img_b: "images/bighits2.svg"
+                Row {
+                    spacing: 5
+                    anchors.horizontalCenter: butPauseRadio.horizontalCenter
+                    anchors.verticalCenter: butPauseRadio.verticalCenter
+                    Rectangle {
+                        width: 10
+                        height: 30
+                        color: "white"
+                    }
+
+                    Rectangle {
+                        width: 10
+                        height: 30
+                        color: "white"
+                    }
+                }
+
+
             }
 
         }

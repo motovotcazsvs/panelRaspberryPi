@@ -3,10 +3,10 @@ import QtQuick.Window 2.2
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.4
-import QtGraphicalEffects 1.0
+//import QtGraphicalEffects 1.0
 
-Item {
-    id: root
+Column {
+    spacing: 5
 
     property alias img_b: image_station_dance.source
     property int size_but_radio_station: 70
@@ -36,14 +36,15 @@ Item {
                 anchors.fill: rec2_radio
                 anchors.margins: 5
             }
-/*
-            ColorOverlay {
-                anchors.fill: image_station_dance
-                source: image_station_dance
-                color: "#ff6000"
-            }
-*/
             
-        }
+        }        
+
+    }
+
+    Text {
+        id: name_radio_station
+        text: qsTr("text")
+        color: "white"
+        anchors.horizontalCenter: but_radio_station.horizontalCenter
     }
 }
