@@ -358,7 +358,7 @@ Window {
                 id: butBigHits
 
                 anchors.left: butRussianHits.right
-                anchors.leftMargin: butRussianHits.x
+                x: 20 + 70 + 20
                 y: 250
                 //img_b: "images/bighits.png"
                 img_b: "images/bighits2.svg"
