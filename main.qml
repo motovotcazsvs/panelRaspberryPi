@@ -451,6 +451,14 @@ Window {
                 border.width: 1
                 color: "black"
 
+                MouseArea {
+                    id: pressButPauseRadio
+                    anchors.fill: butPauseRadio
+                    onClicked: {
+
+                    }
+                }
+
                 Rectangle {
                     id: recbutpause
                     width: 56

@@ -20,6 +20,14 @@ Column {
         border.width: 1
         radius: 35
         color: "black"
+
+        MouseArea {
+            id: press_but_radio_station
+            anchors.fill: but_radio_station
+            onClicked: {
+
+            }
+        }
         
         Rectangle {
             id: rec2_radio
