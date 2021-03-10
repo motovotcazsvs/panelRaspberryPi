@@ -9,20 +9,49 @@ Column {
     spacing: 5
 
     property alias img_b: image_station_dance.source
-    property alias img_b1: image_station_dance.source
     property int size_but_radio_station: 70
     property alias name_radio_station: name_radio_station.text
     property string radio_station: ""
     property real num_radio: 0
-    property bool on_num_radio1: false
-    function numRadioFunc(num_radio){
+
+    function offRadioFunc(){
+        butDanceRadio.r1 = false
+        buttonRadioStation1.r2 = false
+        buttonRadioStation2.r3 = false
+        buttonRadioStation3.r4 = false
+        buttonRadioStation4.r5 = false
+        buttonRadioStation5.r6 = false
+        buttonRadioStation6.r7 = false
+    }
+
+    function numRadioFunc(){
         if (num_radio == 1){
-            img_b = "images/danceradio2.png";
-            //img_b1 = "images/gold.png"
+            offRadioFunc();
+            butDanceRadio.r1 = true
         }
         else if (num_radio == 2){
-            //img_b = "images/danceradio.png";
-            img_b1 = "images/gold2.svg";
+            offRadioFunc();
+            buttonRadioStation1.r2 = true
+        }
+        else if (num_radio == 3){
+            offRadioFunc();
+            buttonRadioStation2.r3 = true
+        }
+        else if (num_radio == 4){
+            offRadioFunc();
+            buttonRadioStation3.r4 = true
+        }
+        else if (num_radio == 5){
+            offRadioFunc();
+            buttonRadioStation4.r5 = true
+        }
+        else if (num_radio == 6){
+            offRadioFunc();
+            buttonRadioStation5.r6 = true
+        }
+        else if (num_radio == 7){
+            offRadioFunc();
+            buttonRadioStation6.r7 = true
         }
     }
 
@@ -42,7 +71,7 @@ Column {
                 radio.setUrlStation(radio_station);
                 radio.playRadioClicked();
                 butPauseRadio.play_pause = true
-                numRadioFunc(num_radio);
+                numRadioFunc();
             }
         }
         

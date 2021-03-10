@@ -373,11 +373,11 @@ Window {
 
                 x: fon_radio.width / 2 - 35
                 y: 200
-                img_b: "images/danceradio.png"
-                //img_b: "images/danceradio2.png"
                 name_radio_station: "Record"
                 radio_station: "https://air2.radiorecord.ru:9003/rr_320"
                 num_radio: 1
+                property bool r1: false
+                img_b: r1 ? "images/danceradio2.png" : "images/danceradio.png"
             }
 
             Grid {
@@ -394,51 +394,62 @@ Window {
                 ButtonRadioStation {
                     id: buttonRadioStation1
 
-                    img_b1: "images/gold.png"
-                    //img_b: "images/gold2.svg"
                     name_radio_station: "Record Gold"
                     radio_station: "https://air2.radiorecord.ru:805/gold_320"
                     num_radio: 2
+                    property bool r2: false
+                    img_b: r2 ? "images/gold2.svg" : "images/gold.png"
+
                 }
 
                 ButtonRadioStation {
                     id: buttonRadioStation2
 
-                    //img_b: "images/bighits.png"
-                    img_b: "images/bighits2.svg"
                     name_radio_station: "Big Hits"
+                    radio_station: "https://air2.radiorecord.ru:9003/bighits_320"
+                    num_radio: 3
+                    property bool r3: false
+                    img_b: r3 ? "images/bighits2.svg" : "images/bighits.png"
                 }
 
                 ButtonRadioStation {
                     id: buttonRadioStation3
 
-                    //img_b: "images/russianhits.png"
-                    img_b: "images/russianhits2.svg"
                     name_radio_station: "Russian Hits"
+                    radio_station: "https://air2.radiorecord.ru:805/russianhits_320"
+                    num_radio: 4
+                    property bool r4: false
+                    img_b: r4 ? "images/russianhits2.svg" : "images/russianhits.png"
                 }
 
                 ButtonRadioStation {
                     id: buttonRadioStation4
 
-                    //img_b: "images/sd90.png"
-                    img_b: "images/sd902.svg"
                     name_radio_station: "Супер<br>дискотека 90-х"
+                    radio_station: "https://air2.radiorecord.ru:805/sd90_320"
+                    num_radio: 5
+                    property bool r5: false
+                    img_b: r5 ? "images/sd902.svg" : "images/sd90.png"
                 }
 
                 ButtonRadioStation {
                     id: buttonRadioStation5
 
-                    //img_b: "images/russiangold.png"
-                    img_b: "images/russiangold2.svg"
                     name_radio_station: "Russian Gold"
+                    radio_station: "https://air2.radiorecord.ru:805/russiangold_128"
+                    num_radio: 6
+                    property bool r6: false
+                    img_b: r6 ? "images/russiangold2.svg" : "images/russiangold.png"
                 }
 
                 ButtonRadioStation {
                     id: buttonRadioStation6
 
-                    //img_b: "images/rv.png"
-                    img_b: "images/rv2.svg"
                     name_radio_station: "Руки Вверх!"
+                    radio_station: "https://air.radiorecord.ru:805/rv_128"
+                    num_radio: 7
+                    property bool r7: false
+                    img_b: r7 ? "images/rv2.svg" : "images/rv.png"
                 }
 
             }
