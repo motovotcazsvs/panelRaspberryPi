@@ -9,9 +9,22 @@ Column {
     spacing: 5
 
     property alias img_b: image_station_dance.source
+    property alias img_b1: image_station_dance.source
     property int size_but_radio_station: 70
     property alias name_radio_station: name_radio_station.text
     property string radio_station: ""
+    property real num_radio: 0
+    property bool on_num_radio1: false
+    function numRadioFunc(num_radio){
+        if (num_radio == 1){
+            img_b = "images/danceradio2.png";
+            //img_b1 = "images/gold.png"
+        }
+        else if (num_radio == 2){
+            //img_b = "images/danceradio.png";
+            img_b1 = "images/gold2.svg";
+        }
+    }
 
     Rectangle {
         id: but_radio_station
@@ -28,6 +41,8 @@ Column {
             onClicked: {
                 radio.setUrlStation(radio_station);
                 radio.playRadioClicked();
+                butPauseRadio.play_pause = true
+                numRadioFunc(num_radio);
             }
         }
         

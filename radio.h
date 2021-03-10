@@ -17,6 +17,7 @@ signals:
 
 public slots:
     void playRadioClicked();
+    void playPauseRadioClicked();
     void pauseRadioClicked();
     void setUrlStation(QString);
     //void stateChanged();

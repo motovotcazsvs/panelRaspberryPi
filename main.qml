@@ -373,11 +373,11 @@ Window {
 
                 x: fon_radio.width / 2 - 35
                 y: 200
-                //img_b: "images/danceradio.png"
-                img_b: "images/danceradio2.png"
+                img_b: "images/danceradio.png"
+                //img_b: "images/danceradio2.png"
                 name_radio_station: "Record"
-                radio_station: "https://air2.radiorecord.ru:9002/rr_128"
-
+                radio_station: "https://air2.radiorecord.ru:9003/rr_320"
+                num_radio: 1
             }
 
             Grid {
@@ -394,9 +394,11 @@ Window {
                 ButtonRadioStation {
                     id: buttonRadioStation1
 
-                    //img_b: "images/gold.png"
-                    img_b: "images/gold2.svg"
+                    img_b1: "images/gold.png"
+                    //img_b: "images/gold2.svg"
                     name_radio_station: "Record Gold"
+                    radio_station: "https://air2.radiorecord.ru:805/gold_320"
+                    num_radio: 2
                 }
 
                 ButtonRadioStation {
@@ -461,7 +463,7 @@ Window {
                     anchors.fill: butPauseRadio
                     onClicked: {
                         butPauseRadio.play_pause = !butPauseRadio.play_pause
-                        if (butPauseRadio.play_pause) radio.playRadioClicked();
+                        if (butPauseRadio.play_pause) radio.playPauseRadioClicked();
                         else radio.pauseRadioClicked();
 
                     }
