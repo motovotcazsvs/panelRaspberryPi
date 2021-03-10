@@ -376,8 +376,8 @@ Window {
                 //img_b: "images/danceradio.png"
                 img_b: "images/danceradio2.png"
                 name_radio_station: "Record"
-                radio_station: "https://air2.radiorecord.ru:9002/rr_128"
-
+                radio_station: "https://air2.radiorecord.ru:9003/rr_320"
+                
             }
 
             Grid {
@@ -461,7 +461,7 @@ Window {
                     anchors.fill: butPauseRadio
                     onClicked: {
                         butPauseRadio.play_pause = !butPauseRadio.play_pause
-                        if (butPauseRadio.play_pause) radio.playRadioClicked();
+                        if (butPauseRadio.play_pause) radio.playPauseRadioClicked();
                         else radio.pauseRadioClicked();
 
                     }

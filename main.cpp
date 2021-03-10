@@ -49,6 +49,10 @@ int main(int argc, char *argv[])
     ctx->setContextProperty("output", &gpio13);
     ctx->setContextProperty("pwm_led", &gpio4);
 
+    Radio radio;
+    ctx->setContextProperty("radio", &radio);
+
+
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
 

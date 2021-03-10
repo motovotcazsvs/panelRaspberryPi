@@ -11,6 +11,7 @@ Column {
     property alias img_b: image_station_dance.source
     property int size_but_radio_station: 70
     property alias name_radio_station: name_radio_station.text
+    property string radio_station: ""
 
     Rectangle {
         id: but_radio_station
@@ -25,7 +26,8 @@ Column {
             id: press_but_radio_station
             anchors.fill: but_radio_station
             onClicked: {
-
+                radio.setUrlStation(radio_station);
+                radio.playRadioClicked();
             }
         }
         
