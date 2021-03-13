@@ -351,12 +351,13 @@ Window {
                anchors.horizontalCenter: fon_radio.horizontalCenter
 
                Timer {
+                   id: timer_update_track
                    interval: 30000; running: true; repeat: true
                    onTriggered: {
                        radio.updateNameTracks();
-                       //text_str1.text = radio.getNameTrack1();
-                       //text_str2.text = radio.getNameTrack2();
-                       //text_str3.text = radio.getNameTrack3();
+                       text_str1.text = radio.getNameTrack1();
+                       text_str2.text = radio.getNameTrack2();
+                       text_str3.text = radio.getNameTrack3();
                    }
                }
 
