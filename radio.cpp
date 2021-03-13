@@ -45,7 +45,6 @@ void Radio::updateNameTracks()
     QStringList params;
     QProcess p;
     QString path_scraping = this->getScraping();
-    qDebug() << path_scraping;
     //params << "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping1.py";//для планшета
     //params << "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping1.py";//для ноутбука
     params << path_scraping;
@@ -54,8 +53,8 @@ void Radio::updateNameTracks()
     QString p_stdout = QString::fromLocal8Bit(p.readAll());
     p_stdout = p_stdout.simplified();
 
-    p_stdout.remove("ейчас в эфире Радио Рекорд с");
-    p_stdout.remove(" Плейлист Радио Рекорд");
+    p_stdout = p_stdout.remove(0, p_stdout.lastIndexOf("сейчас"));
+    p_stdout = p_stdout.left(p_stdout.lastIndexOf(" Плейлист"));
     qDebug() << p_stdout;
 
     QString str_track1 = p_stdout;
@@ -95,7 +94,7 @@ QString Radio::getNameTrack3()
 int Radio::getStation()
 {
     int return_get_station = 0;
-    if(radio_station == "https://air2.radiorecord.ru:9002/rr_128") {return_get_station = 0; qDebug() << return_get_station;}
+    if(radio_station == "https://air2.radiorecord.ru:9002/rr_128") return_get_station = 0;
     else if(radio_station == "https://air2.radiorecord.ru:9003/rr_320") return_get_station = 1;
     else if(radio_station == "https://air2.radiorecord.ru:805/gold_320") return_get_station = 2;
     else if(radio_station == "https://air2.radiorecord.ru:9003/bighits_320") return_get_station = 3;
@@ -113,37 +112,36 @@ QString Radio::getScraping()
     int gs = this->getStation();
     switch (gs) {
     case 0:
-        return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping1.py"; //для планшета
-        //return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping1.py";//для ноутбука
-        qDebug() << return_get_scraping;
+        //return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping1.py"; //для планшета
+        return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping1.py";//для ноутбука
         break;
     case 1:
-        return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping1.py"; //для планшета
-        //return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping1.py";//для ноутбука
+        //return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping1.py"; //для планшета
+        return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping1.py";//для ноутбука
         break;
     case 2:
-        return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping2.py"; //для планшета
-        //return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping2.py";//для ноутбука
+        //return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping2.py"; //для планшета
+        return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping2.py";//для ноутбука
         break;
     case 3:
-        return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping3.py"; //для планшета
-        //return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping3.py";//для ноутбука
+        //return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping3.py"; //для планшета
+        return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping3.py";//для ноутбука
         break;
     case 4:
-        return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping4.py"; //для планшета
-        //return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping4.py";//для ноутбука
+        //return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping4.py"; //для планшета
+        return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping4.py";//для ноутбука
         break;
     case 5:
-        return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping5.py"; //для планшета
-        //return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping5.py";//для ноутбука
+        //return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping5.py"; //для планшета
+        return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping5.py";//для ноутбука
         break;
     case 6:
-        return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping6.py"; //для планшета
-        //return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping6.py";//для ноутбука
+        //return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping6.py"; //для планшета
+        return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping6.py";//для ноутбука
         break;
     case 7:
-        return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping7.py"; //для планшета
-        //return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping7.py";//для ноутбука
+        //return_get_scraping = "D:/projects/exampleRaspberryPi/panelRaspberryPi/scraping7.py"; //для планшета
+        return_get_scraping = "C:/QT_PROJECTS/exampleRaspberryPi/panelRaspberryPi/scraping7.py";//для ноутбука
         break;
     default:
         break;
