@@ -342,29 +342,43 @@ Window {
                 font.pointSize: 10
                 anchors.top: zastavka_record.bottom
                 anchors.topMargin: 3
-                //anchors.horizontalCenter: fon_radio.horizontalCenter
+                anchors.horizontalCenter: fon_radio.horizontalCenter
             }
 
             Column  {
                id: columnvefire
                anchors.top: vefire.bottom
+               anchors.horizontalCenter: fon_radio.horizontalCenter
 
-               Text {
-                   text: "string1 gjhghjgj gjhgjgjhjhhk jhk"
-                   color: "green"
-                   font.pointSize: 8
+               Timer {
+                   interval: 30000; running: true; repeat: true
+                   onTriggered: {
+                       radio.updateNameTracks();
+                       text_str1.text = radio.getNameTrack1();
+                       text_str2.text = radio.getNameTrack2();
+                       text_str3.text = radio.getNameTrack3();
+                   }
                }
 
                Text {
-                   text: "string2 gjhghjgj gjhgjgjhjhhk jhk"
+                   id: text_str1
+                   text: radio.getNameTrack1();
                    color: "green"
-                   font.pointSize: 8
+                   font.pointSize: 6
                }
 
                Text {
-                   text: "string3 gjhghjgj gjhgjgjhjhhk jhk"
+                   id: text_str2
+                   text: radio.getNameTrack2();
                    color: "green"
-                   font.pointSize: 8
+                   font.pointSize: 6
+               }
+
+               Text {
+                   id: text_str3
+                   text: radio.getNameTrack3();
+                   color: "green"
+                   font.pointSize: 6
                }
             }
 
